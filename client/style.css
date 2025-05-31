@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+input, button {
+  padding: 10px;
+  margin: 5px;
+}
+ul {
+  list-style-type: none;
+}
+.highlight-square {
+  background-color: rgba(0, 255, 0, 0.4) !important;
+}
