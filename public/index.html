@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Multiplayer Chess</title>
+  <link rel="stylesheet" href="https://unpkg.com/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Multiplayer Chess</h2>
+  <div>
+    <input type="text" id="roomIdInput" placeholder="4-digit Room ID" maxlength="4">
+    <button onclick="createRoom()">Create Room</button>
+    <button onclick="toggleRoomVisibility()">Toggle Room Visibility</button>
+  </div>
+  <div id="roomsList">
+    <h3>Available Rooms</h3>
+    <ul id="roomListUl"></ul>
+  </div>
+  <div id="gameArea" style="display: none;">
+    <h3>Room ID: <span id="roomName"></span></h3>
+    <div id="board" style="width: 400px; margin: auto;"></div>
+    <p id="status"></p>
+  </div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+  <script src="https://unpkg.com/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
